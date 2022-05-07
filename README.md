@@ -1,8 +1,7 @@
 beats-output-http
 =================
 
-Outputter for the Elastic Beats platform that simply
-POSTs events to an HTTP endpoint.
+http Outputter plugin for beats
 
 [![Build Status](https://travis-ci.org/raboof/beats-output-http.svg?branch=master)](https://travis-ci.org/raboof/beats-output-http)
 
@@ -13,24 +12,7 @@ To add support for this output plugin to a beat, you
 have to import this plugin into your main beats package,
 like this:
 
-```
-package main
 
-import (
-	"os"
-
-	_ "github.com/raboof/beats-output-http/http"
-
-	"github.com/elastic/beats/filebeat/cmd"
-)
-
-func main() {
-	if err := cmd.RootCmd.Execute(); err != nil {
-		os.Exit(1)
-	}
-}
-
-```
 
 Then configure the http output plugin in filebeat.yaml:
 
